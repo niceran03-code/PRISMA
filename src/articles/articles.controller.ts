@@ -27,7 +27,6 @@ export class ArticlesController {
       await this.articlesService.create(createArticleDto),
     );
   }
-
   @Get()
   @ApiOkResponse({ type: ArticleEntity, isArray: true })
   async findAll() {
@@ -47,7 +46,11 @@ export class ArticlesController {
   async findOne(@Param('id', ParseIntPipe) id: number) {
     return new ArticleEntity(await this.articlesService.findOne(id));
   }
-
+  //80
+  //44 33
+  //磁吸上墙
+  //IKEA 漏勺 木铲（磁吸贴） 小抹布 垃圾桶 100
+  //
   @Patch(':id')
   @ApiCreatedResponse({ type: ArticleEntity })
   async update(
